@@ -55,7 +55,7 @@ formAdicionarTarefa.addEventListener('submit', (evento) => {
     ulTarefas.append(elementoTarefa)
     localStorage.setItem('tarefas: ', JSON.stringify(tarefas))
     textarea.value= ' '
-   
+    formAdicionarTarefa.classList.add('hidden')
 
 });
 
