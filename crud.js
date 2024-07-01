@@ -29,6 +29,12 @@ function criarElementoTarefa(tarefa) {
     const botao = document.createElement('button')
     botao.classList.add('app__section-button-edit')
 
+    botao.onclick = () =>{
+        const novaDescricao = prompt("Qual é novo nome da tarefa? ")
+        paragrafo.textContent = novaDescricao
+
+    }
+
     const imagemBotao = document.createElement('img')
     imagemBotao.setAttribute('src', './imagens/edit.png')
     botao.append(imagemBotao);
@@ -54,7 +60,7 @@ formAdicionarTarefa.addEventListener('submit', (evento) => {
     const elementoTarefa = criarElementoTarefa(tarefa)
     ulTarefas.append(elementoTarefa)
     localStorage.setItem('tarefas: ', JSON.stringify(tarefas))
-    textarea.value= ' '
+    textarea.value = ' '
     formAdicionarTarefa.classList.add('hidden')
 
 });
